@@ -1,6 +1,6 @@
 rndrawer-implemented-rnrouter
 --
-An example for react-native-drawer and react-native-router-flux. The example has been developed by using react-native-drawer and react-native-router-flux directions.
+An example for [react-native-drawer](https://github.com/root-two/react-native-drawer) and [react-native-router-flux](https://github.com/aksonov/react-native-router-flux). The example has been developed by using react-native-drawer and react-native-router-flux directions.
 
 With this scaffolding you can create side menu (drawer) and navigate between your screens (pages) easily.
 
