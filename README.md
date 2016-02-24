@@ -19,4 +19,4 @@ The scenarios of the example;
 
 ![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation.gif)
 
-![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation_old.gif)
+![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation__2.gif)
