@@ -17,8 +17,4 @@ The scenarios of the example;
 * The user navigates the screens by using drawer menu
 * The user logs out
 
-![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation.gif)
-
-![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation__2.gif)
-
 ![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/intro.gif)
