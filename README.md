@@ -2,14 +2,31 @@ rndrawer-implemented-rnrouter
 --
 
 ***Note:*** 
-The files have only React-Native code. Actually I don't have an iOS to test out it. But it should be run by using the following instructions.
+The files have only React-Native code. So there is no Android or iOS folder. But it should be run by using the following instructions.
 
-So, to run the code; 
-* First `react-native init myDrawerExample` command should be run on the console. 
-* Secondly `index.ios.js` file and `src` folder are copied into the new `myDrawerExample` project. And `AppRegistry.registerComponent('reactNativeRouterFluxSample', () => Example);` line of `index.ios.js` file should be changed as `AppRegistry.registerComponent('myDrawerExample', () => Example);`
-* Then run the command of `npm i react-native-button --save && npm i react-native-drawer --save && npm i react-native-router-flux --save`. If `redux` will be used, the command of `npm i redux --save && npm i react-redux --save` should be run too.
+For iOS; 
+* Create a new project by using the command of `react-native init myDrawerExample` on the console. 
+* Copy `index.ios.js` file and `src` folder into the `myDrawerExample` project which is newly created.
+* Find the line below in the `index.ios.js`; <br>
+  `AppRegistry.registerComponent('reactNativeRouterFluxSample', () => Example);` <br>
+  and replace with the below line; <br>
+  `AppRegistry.registerComponent('myDrawerExample', () => Example);`
+* Run the command of `npm i react-native-button --save && npm i react-native-drawer --save && npm i react-native-router-flux --save` on the console in the project directory. <br>
+  If `redux` will be used, the command of `npm i redux --save && npm i react-redux --save` should be run too.
 * Finally, [official site](https://facebook.github.io/react-native/docs/getting-started.html#quick-start) says that; "Open ios/myDrawerExample.xcodeproj and hit run in Xcode".
 
+For Android;
+* Create a new project by using the command of `react-native init myDrawerExample` on the console. 
+* Copy `index.Android.js` file and `src` folder into the `myDrawerExample` project which is newly created.
+* Find the line below in the `index.Android.js`; <br>
+  `AppRegistry.registerComponent('reactNativeRouterFluxSample', () => Example);` <br>
+  and replace with the below line; <br>
+  `AppRegistry.registerComponent('myDrawerExample', () => Example);`
+* Run the command below; <br>
+  `npm i react-native-button --save && npm i react-native-drawer --save && npm i react-native-router-flux --save` <br> 
+  on the console in the project directory. <br>
+  If `redux` will be used, the command of `npm i redux --save && npm i react-redux --save` should be run too.
+* Finally, run the command of `react-native run-android` on the console when in the project directory. If a Windows pc is used, then run the command of `react-native start` too.
 
 ----
 
