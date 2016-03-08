@@ -64,10 +64,10 @@ export default class Example extends Component {
 		};
 	}
 
-  render() {
+	render() {
 		const { drawer } = this.state;
 
-    return (
+		return (
 			<Router name='root'>
 				<Schema
 					name='boot'
@@ -85,7 +85,7 @@ export default class Example extends Component {
 				<Route name='Register' component={Register} schema='main' title="Register Screen" />
 
 				<Route name='Drawer' hideNavBar={true} type='reset'>
-          <SideDrawer>
+					<SideDrawer>
 						<Router
 							sceneStyle={styles.routerScene}
 							navigationBarStyle={styles.navBar}
@@ -95,27 +95,27 @@ export default class Example extends Component {
 							<Route name='Screen1' component={Screen1} schema='main' title='Screen1' />
 							<Route name='Screen2' component={Screen2} schema='main' title='Screen2' />
 						</Router>
-          </SideDrawer>
+					</SideDrawer>
 				</Route>
-
 			</Router>
-    );
-  }
+		);
+	}
 }
 
 
 const styles = StyleSheet.create({
-  navBar: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'red',
-  },
-  navTitle: {
-    color: 'white',
-  },
-  routerScene: {
-    paddingTop: Navigator.NavigationBar.Styles.General.NavBarHeight, // some navbar padding to avoid content overlap
-  },
+	navBar: {
+		flex: 1,
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: 'red',
+	},
+	navTitle: {
+		color: 'white',
+	},
+	routerScene: {
+		paddingTop: Navigator.NavigationBar.Styles.General.NavBarHeight, // some navbar padding to avoid content overlap
+	},
 })
+
