@@ -1,21 +1,27 @@
-import React, { View, Text, Navigator, Platform, StyleSheet, Component } from 'react-native';
-import { Router, Route, Schema, Animations, TabBar} from 'react-native-router-flux';
+import React, {
+	Navigator,
+	StyleSheet,
+	Component,
+	TouchableOpacity,
+	Image,
+} from 'react-native'
 
-import Login from './Login';
-import Register from './Register';
-import SideDrawer from './SideDrawer';
-import Screen_Home from './Screen_Home';
-import Screen1 from './Screen1';
-import Screen2 from './Screen2';
+import Login from './Login'
+import Register from './Register'
+import SideDrawer from './SideDrawer'
+import ScreenHome from './ScreenHome'
+import Screen1 from './Screen1'
+import Screen2 from './Screen2'
 
+import { Router, Route, Schema, Actions, } from 'react-native-router-flux'
 
 /** Optional Redux section ******************************************/
 /*  npm uninstall react-redux --save && npm uninstall redux --save  */
 
-// var RNRF = require('react-native-router-flux');
-// var {Route, Schema, Animations, Actions, TabBar} = RNRF;
 // import { createStore } from 'redux'
 // import { Provider, connect } from 'react-redux'
+// import RNRF from 'react-native-router-flux'
+// var {Route, Schema, Animations, Actions, TabBar} = RNRF
 //
 // function reducer(state = {}, action) {
 //     switch (action.type) {
@@ -29,7 +35,7 @@ import Screen2 from './Screen2';
 //             //console.log("AFTER_POP:", action);
 //             return state;
 //         case Actions.BEFORE_POP:
-//             //console.log("BEFORE_POP:", action);
+//             console.log("BEFORE_POP:", action);
 //             return state;
 //         case Actions.AFTER_DISMISS:
 //             //console.log("AFTER_DISMISS:", action);
@@ -47,58 +53,85 @@ import Screen2 from './Screen2';
 
 /********************************************************************/
 
-const hideNavBar = Platform.OS === 'android'
-const paddingTop = Platform.OS === 'android' ? 0 : 8
-
 export default class Example extends Component {
 
-	// Used for to pass the drawer to the all children
-	static childContextTypes = {
-		drawer: React.PropTypes.object,
+	renderMenuButton = () => {
+		return (
+			<TouchableOpacity
+				style={styles.leftButtonContainer}
+				onPress={() => this.drawer.open()}
+			>
+				<Image
+					source={require('./ic_menu_white_24dp.png')}
+					style={{height: 24, width: 24}}
+				/>
+			</TouchableOpacity>
+		)
 	};
 
-	constructor (props) {
-		super(props);
-		this.state = {
-			drawer: null,
-		};
-	}
+	renderBackButton = () => {
+		return (
+			<TouchableOpacity
+				style={styles.leftButtonContainer}
+				onPress={Actions.pop}
+			>
+				<Image
+					source={require('./ic_arrow_back_white_24dp.png')}
+					style={{height: 24, width: 24}}
+				/>
+			</TouchableOpacity>
+		)
+	};
 
 	render() {
-		const { drawer } = this.state;
-
 		return (
 			<Router name='root'>
+
 				<Schema
 					name='boot'
-					sceneConfig={Navigator.SceneConfigs.FadeAndroid}
-					hideNavBar={true}
-					type='replace'
-				/>
-				<Schema
-					name='main'
-					sceneConfig={Navigator.SceneConfigs.FadeAndroid}
-					hideNavBar={hideNavBar}
+					sceneConfig={Navigator.SceneConfigs.FloatFromRight}
+					hideNavBar
+					type='replace' // When type='replace' is existing Actions.pop never work
 				/>
 
-				<Route name='Login' component={Login} schema='boot' initial hideNavBar title="Welcome" />
-				<Route name='Register' component={Register} schema='main' title="Register Screen" />
+				<Route name='Login' component={Login} schema='boot' initial title="Welcome" />
+				<Route name='Register' component={Register} hideNavBar title="Register Screen" />
 
-				<Route name='Drawer' hideNavBar={true} type='reset'>
-					<SideDrawer>
-						<Router
+				<Route name='Drawer' hideNavBar type='reset'>
+					<SideDrawer ref={c => { c ? this.drawer = c.drawer : this.drawer }}>
+
+					{
+						/*Nested Routes are used for to manage the navbar cases (Route[Home] \ Router \ Route[Home_] )
+						React-Native-Reouter-Flux actions use the route names.*/
+					}
+
+						<Router name='drawerRoot'
 							sceneStyle={styles.routerScene}
 							navigationBarStyle={styles.navBar}
 							titleStyle={styles.navTitle}
 						>
-							<Route name='Home' component={Screen_Home} schema='main' title='Home' />
-							<Route name='Screen1' component={Screen1} schema='main' title='Screen1' />
-							<Route name='Screen2' component={Screen2} schema='main' title='Screen2' />
+							<Schema
+								name='home'
+								sceneConfig={Navigator.SceneConfigs.FloatFromRight}
+								hideNavBar={false}
+								renderLeftButton={this.renderMenuButton}
+							/>
+							<Schema
+								name='interior'
+								sceneConfig={Navigator.SceneConfigs.FloatFromRight}
+								hideNavBar={false}
+								renderLeftButton={this.renderBackButton}
+							/>
+
+							<Route name='Home' component={ScreenHome} schema='home' title='Home' />
+							<Route name='Screen1' component={Screen1} schema='interior' title='Screen1' />
+							<Route name='Screen2' component={Screen2} schema='interior' title='Screen2' />
+
 						</Router>
 					</SideDrawer>
 				</Route>
 			</Router>
-		);
+		)
 	}
 }
 
@@ -109,7 +142,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: 'red',
+		backgroundColor: 'green',
 	},
 	navTitle: {
 		color: 'white',
@@ -117,5 +150,11 @@ const styles = StyleSheet.create({
 	routerScene: {
 		paddingTop: Navigator.NavigationBar.Styles.General.NavBarHeight, // some navbar padding to avoid content overlap
 	},
+	leftButtonContainer: {
+		paddingLeft: 15,
+		paddingRight: 20,
+		flex: 1,
+		flexDirection: 'row',
+		alignItems: 'center',
+	},
 })
-
