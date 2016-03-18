@@ -20,5 +20,5 @@ The scenarios of the example;
 
 *The example has been shaped like* ***Android*** *app. Actually, it is an* ***cross-platform*** *app and you could give shape like an* ***IOS*** *app.*
 
-![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/demo.gif)
+![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation.gif)
 
