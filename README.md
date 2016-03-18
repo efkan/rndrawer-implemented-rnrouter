@@ -18,7 +18,7 @@ The scenarios of the example;
 * The user navigates the screens by using drawer menu
 * The user logs out
 
-*The example has been shaped like* ***Android*** *app. Actually, it is an* ***cross-platform*** *app and you could give shape like an* ***IOS*** *app.*
+*The example has been shaped like an* ***Android*** *app. Actually, it is an* ***cross-platform*** *app and you could give shape like an* ***IOS*** *app.*
 
 ![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation.gif)
 
