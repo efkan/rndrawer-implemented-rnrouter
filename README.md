@@ -22,3 +22,21 @@ The scenarios of the example;
 
 ![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation.gif)
 
+
+Installation
+-------------
+
+**iOS**
+
+1. Run the command of `react-native init reactNativeRouterFluxSample & cd reactNativeRouterFluxSample`
+2. Then `npm i --save react-native-drawer@1.16.7 & npm i --save react-native-router-flux@2.2.7 & npm i --save react-native-button@1.4.2`
+3. Then copy `src` folder and `index.ios.js` file of rndrawer-implemented-rnrouter into the new initiated project.
+4. Finally, [official site](https://facebook.github.io/react-native/docs/getting-started.html#quick-start) says that; "Open ios/reactNativeRouterFluxSample.xcodeproj and hit run in Xcode".
+
+
+**Android**
+
+1. Run the command of `react-native init reactNativeRouterFluxSample & cd reactNativeRouterFluxSample`
+2. Then `npm i --save react-native-drawer@1.16.7 & npm i --save react-native-router-flux@2.2.7 & npm i --save react-native-button@1.4.2`
+3. Then copy `src` folder and `index.android.js` file of rndrawer-implemented-rnrouter into the new initiated project.
+4. Finally, run the command of `react-native run-android & react-native start` and then click to the Reload button on the red screen.
