@@ -1,7 +1,10 @@
 import React, {
+  Component,
+} from 'react'
+
+import {
 	Navigator,
 	StyleSheet,
-	Component,
 	TouchableOpacity,
 	Image,
 } from 'react-native'

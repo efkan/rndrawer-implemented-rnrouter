@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
 import Drawer from 'react-native-drawer'
 import SideDrawerContent from './SideDrawerContent'
 

@@ -1,4 +1,5 @@
-import React, { View, Component, PropTypes } from 'react-native'
+import React, { Component, PropTypes } from 'react'
+import { View, } from 'react-native'
 import Button from 'react-native-button'
 import { Actions } from 'react-native-router-flux'
 

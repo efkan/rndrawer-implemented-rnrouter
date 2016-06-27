@@ -1,3 +1,8 @@
+/*
+ * Probably you want to use stylesheet into the each of js file.
+ * This file has been created for containing the common style and can be deleted.
+ */
+
 import { StyleSheet } from 'react-native'
 
 module.exports = StyleSheet.create({
