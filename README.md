@@ -1,7 +1,7 @@
 rndrawer-implemented-rnrouter
 --
 
-An example for [react-native-drawer](https://github.com/root-two/react-native-drawer) and [react-native-router-flux](https://github.com/aksonov/react-native-router-flux). The example has been developed by using react-native-drawer and react-native-router-flux directions.
+An example for [react-native-drawer](https://github.com/root-two/react-native-drawer) and [react-native-router-flux](https://github.com/aksonov/react-native-router-flux). The example has been developed by using react-native-drawer 1.X and react-native-router-flux 2.X. The new versions of the libraries are not stable yet (2016-04-24). You might try to contribute them! Both of them welcome the new PR.
 
 With this scaffolding you can create side menu (drawer) and navigate between your screens (pages) easily.
 
@@ -18,33 +18,25 @@ The scenarios of the example;
 * The user navigates the screens by using drawer menu
 * The user logs out
 
-![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/intro.gif)
+*The example has been shaped like an* ***Android*** *app. Actually, it is an* ***cross-platform*** *app and you could give shape like an* ***IOS*** *app.*
+
+![launch](https://raw.githubusercontent.com/efkan/rndrawer-implemented-rnrouter/master/presentation.gif)
 
 
+Installation
+-------------
 
-***Note:*** 
-The files have only React-Native code. So there is no Android or iOS folder. But it should be run by using the following instructions.
+**iOS**
 
-For iOS; 
-* Create a new project by using the command of `react-native init myDrawerExample` on the console. 
-* Copy `index.ios.js` file and `src` folder into the `myDrawerExample` project which is newly created.
-* Find the line below in the `index.ios.js`; <br>
-  `AppRegistry.registerComponent('reactNativeRouterFluxSample', () => Example);` <br>
-  and replace with the below line; <br>
-  `AppRegistry.registerComponent('myDrawerExample', () => Example);`
-* Run the command of `npm i react-native-button --save && npm i react-native-drawer --save && npm i react-native-router-flux --save` on the console in the project directory. <br>
-  If `redux` will be used, the command of `npm i redux --save && npm i react-redux --save` should be run too.
-* Finally, [official site](https://facebook.github.io/react-native/docs/getting-started.html#quick-start) says that; "Open ios/myDrawerExample.xcodeproj and hit run in Xcode".
+1. Run the command of `react-native init reactNativeRouterFluxSample & cd reactNativeRouterFluxSample`
+2. Then `npm i --save react-native-drawer@1.16.7 & npm i --save react-native-router-flux@2.2.7 & npm i --save react-native-button@1.4.2`
+3. Then copy `src` folder and `index.ios.js` file of rndrawer-implemented-rnrouter into the new initiated project.
+4. Finally, [official site](https://facebook.github.io/react-native/docs/getting-started.html#quick-start) says that; "Open ios/reactNativeRouterFluxSample.xcodeproj and hit run in Xcode".
 
-For Android;
-* Create a new project by using the command of `react-native init myDrawerExample` on the console. 
-* Copy `index.Android.js` file and `src` folder into the `myDrawerExample` project which is newly created.
-* Find the line below in the `index.Android.js`; <br>
-  `AppRegistry.registerComponent('reactNativeRouterFluxSample', () => Example);` <br>
-  and replace with the below line; <br>
-  `AppRegistry.registerComponent('myDrawerExample', () => Example);`
-* Run the command below; <br>
-  `npm i react-native-button --save && npm i react-native-drawer --save && npm i react-native-router-flux --save` <br> 
-  on the console in the project directory. <br>
-  If `redux` will be used, the command of `npm i redux --save && npm i react-redux --save` should be run too.
-* Finally, run the command of `react-native run-android` on the console when in the project directory. If a Windows pc is used, then run the command of `react-native start` too.
+
+**Android**
+
+1. Run the command of `react-native init reactNativeRouterFluxSample & cd reactNativeRouterFluxSample`
+2. Then `npm i --save react-native-drawer@1.16.7 & npm i --save react-native-router-flux@2.2.7 & npm i --save react-native-button@1.4.2`
+3. Then copy `src` folder and `index.android.js` file of rndrawer-implemented-rnrouter into the new initiated project.
+4. Finally, run the command of `react-native run-android & react-native start` and then click to the Reload button on the red screen.
