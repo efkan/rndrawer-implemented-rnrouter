@@ -1,4 +1,4 @@
-**Deprecated** - This repo uses obsolete version of the `react-native-router-flux` and `react-native-drawer`.
+**Deprecated** - This repo uses obsolete versions of `react-native-router-flux` and `react-native-drawer`.
 
 Pull requests to upgrade this sample are welcomed.
 
