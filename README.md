@@ -1,5 +1,5 @@
-**Deprecated** - This repo uses obsolete versions of `react-native-router-flux` and `react-native-drawer`.
-
+**Deprecated** - This repo uses obsolete versions of `react-native-router-flux` and `react-native-drawer`.<br>
+**Recommendation** - Try the newest versions of `react-native-router-flux` and `react-native-drawer`. They are not nightmares. Believe it! **You can!** <br><br>
 Pull requests to upgrade this sample are welcomed.
 
 rndrawer-implemented-rnrouter
