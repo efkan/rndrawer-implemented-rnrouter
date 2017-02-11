@@ -30,6 +30,8 @@ The scenarios of the example;
 Installation
 -------------
 
+_Because of some breaking changes that've been made in React-Native in the past, some [node_modules files](https://github.com/efkan/rndrawer-implemented-rnrouter/blob/master/change_these_folders_with_their_originals.zip) must be changed with their originals._
+
 **iOS**
 
 1. Run the command of `react-native init reactNativeRouterFluxSample & cd reactNativeRouterFluxSample`
