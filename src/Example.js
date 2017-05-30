@@ -3,12 +3,12 @@ import React, {
 } from 'react'
 
 import {
-	Navigator,
 	StyleSheet,
 	TouchableOpacity,
 	Image,
 } from 'react-native'
 
+import { Navigator } from 'react-native-deprecated-custom-components'
 import Login from './Login'
 import Register from './Register'
 import SideDrawer from './SideDrawer'
