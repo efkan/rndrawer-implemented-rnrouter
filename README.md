@@ -1,6 +1,5 @@
-**Deprecated** - This repo uses obsolete versions of `react-native-router-flux` and `react-native-drawer`.<br>
-**Recommendation** - Try the newest versions of `react-native-router-flux` and `react-native-drawer`. They are not nightmares. Believe it! **You can!** <br><br>
-Pull requests to upgrade this sample are welcomed.
+**Deprecated** - This repo uses obsolete versions of `react-native-router-flux` and `react-native-drawer`. I update the repo for now. But I may not update on someday.<br>
+**Recommendation** - Try [react-navigation](https://reactnavigation.org) module. It uses pure `react-native` components as much as possible.<br><br>
 
 rndrawer-implemented-rnrouter
 --
