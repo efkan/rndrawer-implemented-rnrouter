@@ -9,6 +9,7 @@
   "dependencies": {
     "react-native": "^0.27.0-rc2",
     "react-native-button": "^1.4.2",
+    "react-native-deprecated-custom-components": "^0.1.0",
     "react-native-drawer": "^1.16.7",
     "react-native-router-flux": "^2.2.7",
     "react-redux": "^4.4.0",
